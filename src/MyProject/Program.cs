@@ -346,6 +346,7 @@ namespace MyProject
 
                 while (player1.Life > 0)
                 {
+                    survive++;
                     Rona.Life = 50;
 
                     Console.WriteLine("a) fight \nb) give up");
@@ -369,7 +370,12 @@ namespace MyProject
                             Console.WriteLine("You have given up and let the zombies eat you.");
                             break;
                     }
+                    if (player1.Life > 0)
+                    {
+                        Console.WriteLine("You have defeated another");
+                    }
                 }
+
             }
 
             if (win)
